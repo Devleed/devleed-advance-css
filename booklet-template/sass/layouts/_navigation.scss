@@ -1,0 +1,159 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1500;
+  transition: all 0.3s 1.6s;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    z-index: -2;
+    transition: all 0.4s 0s;
+
+    @include bg-svg($primary-color);
+  }
+
+  &::before {
+    left: 0;
+    border-bottom-right-radius: 90%;
+  }
+
+  &::after {
+    right: 0;
+    border-bottom-left-radius: 90%;
+  }
+
+  &__items {
+    list-style: none;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0s 0s;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__link {
+    @include btn-primary($primary-color-3) {
+      text-decoration: overline;
+      border: none;
+    }
+  }
+}
+
+// * NAVIGATION BUTTON
+.nav__checkbox {
+  display: none;
+}
+
+.nav__btn {
+  position: fixed;
+  z-index: 2000;
+  top: 5rem;
+  right: 6rem;
+  padding: 2rem 1rem;
+  cursor: pointer;
+}
+
+.nav__checkbox {
+  // when checked
+  &:checked {
+    & ~ .nav {
+      width: 100%;
+      transition: all 0s 0s;
+    }
+
+    // button should change
+    & + .nav__btn > .nav__line {
+      background-color: transparent;
+    }
+    & + .nav__btn > .nav__line::after,
+    & + .nav__btn > .nav__line::before {
+      width: 100%;
+      top: 0;
+      height: 8px;
+      border-radius: 10px;
+    }
+
+    & + .nav__btn > .nav__line::after {
+      transform: rotate(132deg);
+      background-color: $primary-color-3;
+    }
+    & + .nav__btn > .nav__line::before {
+      transform: rotate(-132deg);
+    }
+
+    // navbar should appear
+    & ~ .nav::after,
+    & ~ .nav::before {
+      width: 1000%;
+      // transform: scale(2);
+      transition: all 1s 0.3s ease-in;
+    }
+
+    & ~ .nav .nav__items {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.2s 0.6s;
+    }
+
+    & ~ .wrapper {
+      transform: scale(0.9);
+      filter: blur(4px);
+      transition: all 0.3s 0s;
+    }
+
+    & ~ .logo span {
+      background-color: $primary-color-3;
+    }
+  }
+}
+
+.nav__btn:hover .nav__line::before,
+.nav__btn:hover .nav__line::after {
+  width: 100%;
+}
+
+.nav__line {
+  display: inline-block;
+  height: 3px;
+  width: 5rem;
+  background-color: #fff;
+  position: relative;
+  transition: all 0.1s;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 62%;
+    transition: all 0.3s;
+  }
+
+  &::before {
+    top: -1rem;
+    left: 0;
+    background-color: $primary-color-2;
+  }
+
+  &::after {
+    top: 1rem;
+    right: 0;
+    background-color: $primary-color;
+  }
+}

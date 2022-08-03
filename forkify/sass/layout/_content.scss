@@ -1,0 +1,7 @@
+.content {
+  display: flex;
+
+  @include respond-max($smaller) {
+    flex-direction: column;
+  }
+}

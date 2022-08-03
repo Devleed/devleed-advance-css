@@ -1,0 +1,150 @@
+$color-1: #f65058ff;
+$color-2: #fbde44ff;
+$color-3: #28334aff;
+
+$text-color: white;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &-1 {
+    width: 100vw;
+    background-color: $color-1;
+    z-index: 3000;
+
+    font-size: 9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: shrink 3s 2.5s forwards;
+
+    .content {
+      display: flex;
+      position: relative;
+      width: 42%;
+      overflow: hidden;
+
+      color: $text-color;
+    }
+
+    h3 {
+      font-weight: 200;
+    }
+
+    span {
+      height: 10rem;
+      width: 2rem;
+      display: inline-block;
+      background-color: $color-1;
+      margin-left: 2rem;
+      margin-top: 1.2rem;
+      transition: all 0.8s;
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation: disappear 1s 2s forwards;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        background-color: $text-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        animation: bounce 1s 2 forwards, shift-left 3s 2s forwards;
+      }
+    }
+  }
+  &-2 {
+    width: 100vw;
+    background-color: $color-2;
+    z-index: 2000;
+
+    animation: shrink 3s 3s forwards;
+  }
+  &-3 {
+    width: 100vw;
+    background-color: $color-3;
+    z-index: 1000;
+
+    animation: shrink 3s 3.5s forwards;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 4rem;
+  }
+  50% {
+    top: 8rem;
+  }
+  100% {
+    top: 4rem;
+  }
+}
+
+@keyframes shrink {
+  to {
+    width: 0vw;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    width: 2rem;
+  }
+
+  100% {
+    width: 57rem;
+  }
+}
+
+@keyframes shift-left {
+  to {
+    right: 200%;
+  }
+}
+
+.web-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9rem;
+  font-weight: 100;
+  border: 4px solid #000;
+  margin: 5rem;
+  min-height: 80vh;
+
+  animation: expand 3s 5s backwards;
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

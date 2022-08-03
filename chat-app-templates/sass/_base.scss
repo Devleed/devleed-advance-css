@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond-max($large-750px) {
+    font-size: 56.5%;
+  }
+}
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(to right, $primary-color, $primary-color-2);
+  min-height: 100vh;
+  // padding: 4rem;
+
+  // @include respond-max($largest-1200px) {
+  //   padding: 0;
+  // }
+}

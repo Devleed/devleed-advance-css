@@ -1,0 +1,30 @@
+.about {
+  padding: 15rem;
+  background-color: $primary-color-3-dark;
+  margin-top: -7rem;
+
+  .primary-heading {
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .para {
+    flex: 0 0 60%;
+  }
+
+  &__img {
+    height: 30rem;
+  }
+}
+
+.offers {
+  @include bg-svg($primary-color-3);
+  padding: 25rem;
+
+  clip-path: polygon(0 85%, 100% 0%, 100% 90vh, 50% 100%, 0 90vh);
+}

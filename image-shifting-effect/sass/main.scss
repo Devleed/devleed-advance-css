@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-family: serif;
+}
+.bg-img {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.bg__pic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transform: scale(1.1);
+  opacity: 0;
+  transition: all 1s;
+
+  &-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5rem 3rem;
+  color: white;
+  flex: 1;
+  transition: all 0.3s;
+
+  &:not(:last-child) {
+    border-right: 1px solid white;
+  }
+
+  &__title {
+    font-size: 2.6rem;
+    transition: all 0.3s;
+  }
+
+  &__desc {
+    font-size: 1.3rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s;
+  }
+
+  &:hover &__desc {
+    max-height: 200px;
+  }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="img/favicon.png" type="image/x-icon" />
+    <title>Forkify | practice by Waleed</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <img
+          srcset="img/logo.png 918w, img/favicon.png 128w"
+          sizes="(max-width: 43.75em) 100px, 918px"
+          alt="logo"
+          class="logo"
+        />
+
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="search over 1000 recipes"
+          />
+          <button class="btn__primary">
+            <svg class="search__icon">
+              <use href="img/icons.svg#icon-magnifying-glass"></use>
+            </svg>
+            search
+          </button>
+        </form>
+        <div class="love">
+          <svg class="love__icon">
+            <use href="img/icons.svg#icon-heart"></use>
+          </svg>
+          <ul class="love__list">
+            <li class="result__item result__item--active">
+              <figure class="result__fig">
+                <img src="img/test-1.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item result__item--active">
+              <figure class="result__fig">
+                <img src="img/test-1.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item result__item--active">
+              <figure class="result__fig">
+                <img src="img/test-1.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item result__item--active">
+              <figure class="result__fig">
+                <img src="img/test-1.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main class="content">
+        <div class="result">
+          <ul class="result__list">
+            <li class="result__item result__item--active">
+              <figure class="result__fig">
+                <img src="img/test-1.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item">
+              <figure class="result__fig">
+                <img src="img/test-2.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item">
+              <figure class="result__fig">
+                <img src="img/test-3.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item">
+              <figure class="result__fig">
+                <img src="img/test-4.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item">
+              <figure class="result__fig">
+                <img src="img/test-5.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item">
+              <figure class="result__fig">
+                <img src="img/test-6.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item">
+              <figure class="result__fig">
+                <img src="img/test-7.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+            <li class="result__item">
+              <figure class="result__fig">
+                <img src="img/test-8.jpg" alt="" class="result__photo" />
+              </figure>
+              <div class="result__text">
+                <span class="result__heading">Pizza</span>
+                <span class="result__desc">it is tasty looking pizza</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="recipe">
+          <figure class="recipe__fig">
+            <img src="img/test-1.jpg" alt="" class="recipe__photo" />
+            <h2 class="recipe__caption">
+              <span>pasta with tomato cream sauce</span>
+            </h2>
+          </figure>
+          <div class="recipe__info">
+            <span class="recipe__time"><b>45</b> minutes</span>
+            <span class="recipe__servings"><b>4</b> servings</span>
+            <button class="recipe__love--btn">
+              <svg class="recipe__icon">
+                <use href="img/icons.svg#icon-heart-outlined"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="recipe__ingredients">
+            <ul class="recipe__list">
+              <li class="recipe__list--item">1000g pasta</li>
+              <li class="recipe__list--item">
+                1/4 cup fresh basil, chopped or torn
+              </li>
+              <li class="recipe__list--item">
+                1 can of tomatoes, whole or crushed
+              </li>
+              <li class="recipe__list--item">1/2 cup grated parmesan cheese</li>
+              <li class="recipe__list--item">1/2 cup ricotta cheese</li>
+              <li class="recipe__list--item">1 can tuna packed in olive oil</li>
+            </ul>
+            <button class="btn__primary">add to shopping list</button>
+          </div>
+
+          <div class="recipe__cta">
+            <h2 class="secondary__heading">want to cook it</h2>
+            <p class="recipe__cta--para">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Cupiditate, fugit?
+            </p>
+            <button class="btn__primary">directions</button>
+          </div>
+        </div>
+        <div class="cart">
+          <h2 class="secondary__heading">My Shopping List</h2>
+          <ul class="cart__list">
+            <li class="cart__item">500g pasta</li>
+            <li class="cart__item">200g ricotta cheese</li>
+            <li class="cart__item">120g mozella cheese</li>
+            <li class="cart__item">1.2kg chicken pieces</li>
+            <li class="cart__item">100g ketchup</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

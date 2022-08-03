@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: 135rem;
+  background-color: var(--color-white);
+  margin: 6rem auto;
+  box-shadow: var(--shadow-light);
+  border-radius: 8px;
+  @include respond-max($largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}

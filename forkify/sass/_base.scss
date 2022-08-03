@@ -1,0 +1,64 @@
+:root {
+  --color-primary: #f59a83;
+  --color-primary-light: #fbdb89;
+  --color-primary-dark: #f48982;
+
+  --color-secondary: #f9f5f3;
+  --color-secondary-dark: #f5f1ee;
+
+  --color-grey-light-1: #fcfcfc;
+  --color-grey-light-2: #c7c7c7;
+  --color-grey-light-3: #b4b4b4;
+  --color-grey-light-4: #a0a0a0;
+
+  --color-grey-dark-1: #7c7c7c;
+  --color-grey-dark-2: #5a5a5a;
+  --color-grey-dark-3: #424242;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --shadow-light: 0 0.7rem 3rem rgba(100, 96, 80, 0.08);
+  --shadow-dark: 0 3rem 6rem #00000080;
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+// * breakpoints
+$largest: 84.375em;
+$large: 75em;
+$medium: 56.25em;
+$small: 45.625em;
+$smaller: 43.75em;
+$smallest: 31.25em;
+$phones: 26em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // * 1rem = 10px
+
+  @include respond-max($large) {
+    font-size: 50%;
+  }
+
+  @include respond-max($medium) {
+    font-size: 45%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  font-family: 'Nunito', sans-serif;
+}

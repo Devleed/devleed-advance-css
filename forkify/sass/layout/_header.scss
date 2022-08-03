@@ -1,0 +1,46 @@
+.header {
+  background-color: var(--color-secondary);
+  display: flex;
+  padding: 2.3rem 3rem;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond-max($phones) {
+    flex-wrap: wrap;
+    height: 20rem;
+    padding: 1.5rem 3rem;
+  }
+
+  .logo {
+    height: 5rem;
+  }
+  .love {
+    position: relative;
+  }
+  .love__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: var(--color-primary);
+    cursor: pointer;
+  }
+  .love__icon:hover + .love__list {
+    opacity: 1;
+    visibility: visible;
+  }
+  .love__list {
+    background-color: var(--color-secondary);
+    position: absolute;
+    top: 7.6rem;
+    width: 36.9rem;
+    left: -29rem;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

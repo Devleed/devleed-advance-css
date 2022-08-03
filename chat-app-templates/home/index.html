@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <h2 class="logo">LOGO</h2>
+      <div class="search">
+        <input
+          type="text"
+          class="search__input"
+          placeholder="Add connections.."
+          id="connection-input"
+        />
+        <span class="focus-border"></span>
+        <img src="../images/search.svg" alt="search icon" class="basic-icon" />
+
+        <div class="search__results">
+          <ul>
+            <li class="chats__item">
+              <img src="../images/male-avatar.svg" alt="" class="chats__img" />
+              <p class="chats__name">John</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="nav__items">
+        <li class="nav__item">
+          <img src="../images/profile.svg" alt="profile" class="basic-icon" />
+        </li>
+        <li class="nav__item">
+          <img src="../images/about.svg" alt="about" class="basic-icon" />
+        </li>
+        <li class="nav__item">
+          <img src="../images/settings.svg" alt="settings" class="basic-icon" />
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <div class="chats">
+        <ul class="chats__list">
+          <li class="chats__item">
+            <img src="../images/male-avatar.svg" alt="" class="chats__img" />
+            <div class="chats__user">
+              <p class="chats__name">John</p>
+              <span class="chats__message">you: hi</span>
+            </div>
+            <span class="chats__date">today</span>
+          </li>
+          <li class="chats__item chats__item-unread">
+            <img src="../images/female-avatar.svg" alt="" class="chats__img" />
+            <div class="chats__user">
+              <p class="chats__name">Julie</p>
+              <span class="chats__message">you: hi</span>
+            </div>
+            <span class="unread__messages"></span>
+            <span class="chats__date">today</span>
+          </li>
+          <li class="chats__item">
+            <img src="../images/male-avatar.svg" alt="" class="chats__img" />
+            <div class="chats__user">
+              <p class="chats__name">John</p>
+              <span class="chats__message">you: hi</span>
+            </div>
+            <span class="chats__date">today</span>
+          </li>
+          <li class="chats__item">
+            <img src="../images/male-avatar.svg" alt="" class="chats__img" />
+            <div class="chats__user">
+              <p class="chats__name">John</p>
+              <span class="chats__message">you: hi</span>
+            </div>
+            <span class="chats__date">today</span>
+          </li>
+        </ul>
+
+        <!-- WHEN CHAT LIST IS EMPTY -->
+        <!-- <div class="chat-cta">
+          <label for="connection-input" class="cta-label">add connection</label>
+        </div> -->
+      </div>
+
+      <div class="msg-area">
+        <div class="user">
+          <img src="../images/female-avatar.svg" alt="" class="chats__img" />
+          <div class="user__info">
+            <p class="user__name">Julie</p>
+            <span class="active-status">last active 2 minutes ago</span>
+          </div>
+          <img src="../images/info.svg" alt="info" class="basic-icon" />
+        </div>
+        <div class="messages">
+          <!-- ======================BY DATE MESSAGE========================= -->
+          <div class="by-date">
+            <span class="date">12-06-20</span>
+            <div class="by-date-messages">
+              <!-- ================SINGLE MESSAGE==================== -->
+              <div class="message own-message">
+                <!-- <div class="message-content"> -->
+                <p class="message__text">
+                  Lorem ipsum dolor,
+                </p>
+                <span class="message__options"
+                  ><img src="../images/ellipses.svg" alt="more options"
+                /></span>
+                <span class="message__reactions">
+                  <input
+                    type="checkbox"
+                    id="react-check-msg-1"
+                    class="react-checkbox"
+                  />
+                  <label for="react-check-msg-1" class="react-btn">
+                    <img src="../images/react.svg" alt="react option" />
+                  </label>
+                  <span class="message__reaction">
+                    <img src="../images/happy-2.svg" alt="happy react" />
+                    <img src="../images/surprised.svg" alt="surprised react" />
+                    <img src="../images/in-love.svg" alt="love react" />
+                    <img src="../images/unhappy.svg" alt="sad react" />
+                    <img src="../images/confused.svg" alt="confuse react" />
+                    <img src="../images/mad.svg" alt="angry react" />
+                  </span>
+                </span>
+                <span class="message__date">12:58 am</span>
+                <!-- </div> -->
+                <div class="message-image-content"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WHEN CHAT IS NOT SELECTED -->
+          <!-- <div class="message-cta">
+            no chat is selected, select a chat to display messages!
+          </div> -->
+        </div>
+        <div class="create-msg">
+          <div class="input-content">
+            <img
+              src="../images/photo.svg"
+              alt="upload photo"
+              class="basic-icon"
+            />
+            <input type="text" class="msg__input" placeholder="type text.." />
+            <img src="../images/send.svg" alt="send icon" class="basic-icon" />
+          </div>
+          <div class="image-preview">
+            <figure class="image-figure">
+              <img
+                src="../../image-shifting-effect/images/pic1.jpg"
+                alt="an image for testing"
+                class="create-image"
+              />
+              <span class="image-cancel-icon">&Cross;</span>
+            </figure>
+            <figure class="image-figure">
+              <img
+                src="../../image-shifting-effect/images/pic2.jpg"
+                alt="an image for testing"
+                class="create-image"
+              />
+              <span class="image-cancel-icon">&Cross;</span>
+            </figure>
+            <figure class="image-figure">
+              <img
+                src="../../image-shifting-effect/images/pic3.jpg"
+                alt="an image for testing"
+                class="create-image"
+              />
+              <span class="image-cancel-icon">&Cross;</span>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-info">
+        <img
+          src="../images/female-avatar.svg"
+          alt="female avatar"
+          class="user__avatar margin-bottom-small"
+        />
+        <h3 class="user__name">Julie</h3>
+        <span class="user__register-date">Joined on 29 june 2018</span>
+      </div>
+    </main>
+
+    <script>
+      const messages = document.querySelector('.messages');
+      const scrollToBottom = el => (el.scrollTop = el.scrollHeight);
+
+      scrollToBottom(messages);
+    </script>
+  </body>
+</html>

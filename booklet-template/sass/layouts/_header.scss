@@ -1,0 +1,33 @@
+.header {
+  @include bg-svg($primary-color-3);
+  height: 100vh;
+  color: $text-color;
+
+  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 100% 100%, 0 75vh);
+  clip-path: polygon(0 0, 100% 0%, 100% 90vh, 50% 100%, 0 90vh);
+
+  display: flex;
+  justify-content: space-between;
+  padding: 20rem 15rem 1rem 15rem;
+
+  &__text {
+    flex: 0 0 60%;
+    height: 100%;
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__image {
+    height: 25rem;
+  }
+
+  .btn-primary {
+    @include btn-primary($primary-color) {
+      width: auto;
+      font-size: 1.7rem;
+      margin: 0;
+    }
+  }
+}
